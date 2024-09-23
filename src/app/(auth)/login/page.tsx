@@ -18,7 +18,9 @@ export default function SignIn() {
 
       <section className="flex flex-col items-center justify-center gap-10 mx-auto">
         <article className="flex flex-col gap-0.5">
-          <h1 className="font-bold text-2xl leading-short">Boas vindas!</h1>
+          <strong className="font-bold text-2xl leading-short">
+            Boas vindas!
+          </strong>
           <p className="text-gray-200">
             Faça seu login ou acesso como visitante.
           </p>

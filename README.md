@@ -21,6 +21,7 @@ A project created as last challenge of the course [ReactJS - Ignite | RocketSeat
     ```
   - [`TailwindCss`](https://tailwindcss.com/)
   - [`Tailwind-Variants`](https://tailwind-variants.org)
+  - [`Tailwind-Merge`](https://github.com/dcastil/tailwind-merge)
   - 
 
   > Other 'small' dependencies used in this project(npm i)

@@ -1,7 +1,7 @@
 'use client'
 
-import Image from 'next/image'
 import * as React from 'react'
+import Image from 'next/image'
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {

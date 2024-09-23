@@ -3,7 +3,7 @@ import hero from '../../../../public/login/hero.png'
 import googleLogo from '../../../../public/brand/google.svg'
 import githubLogo from '../../../../public/brand/github.svg'
 import rocket from '../../../../public/login/rocket.svg'
-import { Button } from './components/button'
+import { Button } from '../../components/ui/button'
 
 export default function SignIn() {
   return (

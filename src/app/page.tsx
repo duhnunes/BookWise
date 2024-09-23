@@ -3,7 +3,7 @@ import { Tags } from './components/ui/tags'
 
 export default function Home() {
   return (
-    <div className="font-default bg-gray-800 h-svh w-svw">
+    <div className="font-default text-base bg-gray-800 text-gray-100 h-svh w-svw">
       <Tags>Computação</Tags>
       <Tags>Computação</Tags>
       <Tags>Computação</Tags>

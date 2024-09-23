@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import hero from '../../../../public/login/hero.png'
 import { Button } from '@/app/components/ui/button'
-import { Github } from '@/app/components/brands/github'
-import { GoogleLogo } from '@/app/components/brands/google'
-import { GuestLogo } from '@/app/components/brands/guest'
+import { Github } from '@/app/components/assets/github'
+import { GoogleLogo } from '@/app/components/assets/google'
+import { GuestLogo } from '@/app/components/assets/guest'
 
 export default function SignIn() {
   return (

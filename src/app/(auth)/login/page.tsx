@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import hero from '../../../../public/login/hero.png'
-import googleLogo from '../../../../public/brand/google.svg'
-import githubLogo from '../../../../public/brand/github.svg'
-import rocket from '../../../../public/login/rocket.svg'
 import { Button } from '@/app/components/ui/button'
+import { Github } from '@/app/components/brands/github'
+import { GoogleLogo } from '@/app/components/brands/google'
+import { GuestLogo } from '@/app/components/brands/guest'
 
 export default function SignIn() {
   return (
@@ -28,35 +28,17 @@ export default function SignIn() {
 
         <article className="flex flex-col gap-4">
           <Button variant="default" size="default">
-            <Image
-              src={googleLogo}
-              width={32}
-              height={32}
-              alt=""
-              className="pointer-events-none"
-            />
+            <GoogleLogo />
             Entrar com Google
           </Button>
 
           <Button variant="default" size="default">
-            <Image
-              src={githubLogo}
-              width={32}
-              height={32}
-              alt=""
-              className="pointer-events-none"
-            />
+            <Github />
             Entrar com Github
           </Button>
 
           <Button variant="default" size="default">
-            <Image
-              src={rocket}
-              width={32}
-              height={32}
-              alt=""
-              className="pointer-events-none"
-            />
+            <GuestLogo />
             Entrar como visitante
           </Button>
         </article>

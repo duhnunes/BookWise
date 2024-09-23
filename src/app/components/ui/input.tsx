@@ -1,6 +1,6 @@
 'use client'
 
-import { MagnifyingGlass } from '@phosphor-icons/react'
+import { Search } from 'lucide-react'
 import * as React from 'react'
 
 export interface InputProps
@@ -16,7 +16,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           {...props}
         />
-        <MagnifyingGlass className="size-5 text-gray-500 group-focus-within:text-green-200" />
+        <Search className="size-5 text-gray-500 group-focus-within:text-green-200" />
       </div>
     )
   },

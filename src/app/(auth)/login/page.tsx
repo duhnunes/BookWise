@@ -3,6 +3,7 @@ import hero from '../../../../public/login/hero.png'
 import googleLogo from '../../../../public/brand/google.svg'
 import githubLogo from '../../../../public/brand/github.svg'
 import rocket from '../../../../public/login/rocket.svg'
+import { Button } from './components/button'
 
 export default function SignIn() {
   return (
@@ -24,35 +25,11 @@ export default function SignIn() {
         </article>
 
         <article className="flex flex-col gap-4">
-          <button
-            type="button"
-            className="bg-gray-600 text-gray-200 py-5 px-6 rounded-md inline-flex items-center gap-5 hover:brightness-90"
-          >
-            <Image src={googleLogo} width={32} height={32} alt="" />
-            <span className="text-gray-200 text-lg font-bold">
-              Entrar com Google
-            </span>
-          </button>
+          <Button src={googleLogo}>Entrar com Google</Button>
 
-          <button
-            type="button"
-            className="bg-gray-600 text-gray-200 py-5 px-6 rounded-md inline-flex items-center gap-5 hover:brightness-90"
-          >
-            <Image src={githubLogo} width={32} height={32} alt="" />
-            <span className="text-gray-200 text-lg font-bold">
-              Entrar com GitHub
-            </span>
-          </button>
+          <Button src={githubLogo}>Entrar com Github</Button>
 
-          <button
-            type="button"
-            className="bg-gray-600 text-gray-200 py-5 px-6 rounded-md inline-flex items-center gap-5 hover:brightness-90"
-          >
-            <Image src={rocket} width={32} height={32} alt="" />
-            <span className="text-gray-200 text-lg font-bold">
-              Entrar como visitante
-            </span>
-          </button>
+          <Button src={rocket}>Entrar como visitante</Button>
         </article>
       </section>
     </main>

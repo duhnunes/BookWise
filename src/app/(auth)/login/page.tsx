@@ -3,7 +3,7 @@ import hero from '../../../../public/login/hero.png'
 import googleLogo from '../../../../public/brand/google.svg'
 import githubLogo from '../../../../public/brand/github.svg'
 import rocket from '../../../../public/login/rocket.svg'
-import { Button } from '../../components/ui/button'
+import { Button } from '@/app/components/ui/button'
 
 export default function SignIn() {
   return (
@@ -27,11 +27,38 @@ export default function SignIn() {
         </article>
 
         <article className="flex flex-col gap-4">
-          <Button src={googleLogo}>Entrar com Google</Button>
+          <Button variant="default" size="default">
+            <Image
+              src={googleLogo}
+              width={32}
+              height={32}
+              alt=""
+              className="pointer-events-none"
+            />
+            Entrar com Google
+          </Button>
 
-          <Button src={githubLogo}>Entrar com Github</Button>
+          <Button variant="default" size="default">
+            <Image
+              src={githubLogo}
+              width={32}
+              height={32}
+              alt=""
+              className="pointer-events-none"
+            />
+            Entrar com Github
+          </Button>
 
-          <Button src={rocket}>Entrar como visitante</Button>
+          <Button variant="default" size="default">
+            <Image
+              src={rocket}
+              width={32}
+              height={32}
+              alt=""
+              className="pointer-events-none"
+            />
+            Entrar como visitante
+          </Button>
         </article>
       </section>
     </main>

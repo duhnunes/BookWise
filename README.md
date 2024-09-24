@@ -26,5 +26,5 @@ A project created as last challenge of the course [ReactJS - Ignite | RocketSeat
 
   > Other 'small' dependencies used in this project(npm i)
   - [`rocketseat/eslint-config`](https://github.com/Rocketseat/eslint-config-rocketseat)
-  - [`Phosphor Icons`](https://phosphoricons.com/)
+  - [`Lucide`](https://lucide.dev/)
   - 

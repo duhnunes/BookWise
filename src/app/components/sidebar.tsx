@@ -5,7 +5,7 @@ import { BinocularsIcon, ChartLine, LogIn } from 'lucide-react'
 
 export const Sidebar = () => {
   return (
-    <aside className="fixed top-5 left-5 bottom-5 rounded-xl bg-gray-700 pt-10 pb-6 px-12 overflow-hidden">
+    <aside className="fixed bottom-5 top-5 left-5 rounded-xl bg-gray-700 pt-10 pb-6 px-12 overflow-hidden">
       <section className="flex flex-col h-full">
         <Image
           src={logo}

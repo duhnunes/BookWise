@@ -6,7 +6,7 @@ import { Avatar } from './avatar'
 
 export const Sidebar = () => {
   return (
-    <aside className="fixed bottom-5 top-5 left-5 rounded-xl bg-gray-700 pt-10 pb-6 overflow-hidden w-[232px]">
+    <aside className="fixed bottom-5 top-5 left-5 rounded-xl bg-gray-700 pt-10 pb-6 overflow-hidden w-[14.5rem]">
       <section className="flex flex-col h-full">
         <Image
           src={logo}

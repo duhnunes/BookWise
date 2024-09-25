@@ -1,20 +1,13 @@
 import { Star } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Avatar } from '../avatar'
 
 export const BookReview = () => {
   return (
     <section className="flex flex-col gap-y-8 p-6 bg-gray-700 rounded-md">
       <header className="flex items-start justify-between gap-4">
-        <figure className="bg-gradient-to-b from-from to-to rounded-full w-10 h-10 p-0.5 overflow-hidden">
-          <Image
-            src="https://github.com/duhnunes.png"
-            width={40}
-            height={40}
-            alt=""
-            className="rounded-full"
-          />
-        </figure>
+        <Avatar />
         <div className="flex-1 flex flex-col -space-y-1">
           <strong className="text-gray-100 font-bold text-md">DuH Nunes</strong>
           <span className="text-gray-400 text-sm">Hoje</span>

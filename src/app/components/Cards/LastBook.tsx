@@ -5,7 +5,7 @@ import { StarRating } from '../starrating'
 
 export const LastBook = () => {
   return (
-    <section className="flex flex-col gap-y-8 px-6 py-5 bg-gray-600 rounded-md mb-5">
+    <section className="flex flex-col gap-y-8 px-6 py-5 bg-gray-600 rounded-md">
       <article className="flex items-stretch gap-5">
         <Image
           src={bookImg}

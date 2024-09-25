@@ -17,8 +17,8 @@ export default function Home() {
         </h1>
 
         <section className="flex items-start gap-x-16">
-          <div className="flex flex-col">
-            <article className="flex flex-col gap-4">
+          <div className="space-y-6">
+            <article className="flex flex-col gap-4 max-w-[608px]">
               <div className="flex items-center justify-between">
                 <span className="text-gray-100 text-sm">
                   Sua última leitura
@@ -31,17 +31,17 @@ export default function Home() {
               <LastBook />
             </article>
 
-            <div className="w-[608px] space-y-4">
+            <article className="max-w-[608px] space-y-4">
               <span className="text-gray-100 text-sm">
                 Avaliações mais recentes
               </span>
 
-              <article className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3">
                 <BookReview />
                 <BookReview />
                 <BookReview />
-              </article>
-            </div>
+              </div>
+            </article>
           </div>
 
           <div className="w-[324px] space-y-4">

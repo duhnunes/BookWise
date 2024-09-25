@@ -6,7 +6,7 @@ import { BookCard } from '../components/Cards/BookCard'
 
 export default function Home() {
   return (
-    <main className="bg-gray-800 text-gray-100 min-h-svh grid grid-cols-12">
+    <main className="min-h-svh grid grid-cols-12">
       <Sidebar />
       <section className="pr-24 flex flex-col mt-[72px] gap-10 col-span-4 col-start-4 col-end-13">
         <h1 className="inline-flex items-center gap-3 text-gray-100 font-bold text-2xl">

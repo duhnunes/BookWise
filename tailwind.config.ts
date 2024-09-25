@@ -7,9 +7,6 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    fontFamily: {
-      default: 'Nunito, sans-serif',
-    },
     extend: {
       space: {
         px: '1px',

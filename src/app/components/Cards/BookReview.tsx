@@ -1,9 +1,9 @@
-import { Star } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Avatar } from '../avatar'
 
 import bookImg from '../../../../public/images/books/o-hobbit.png'
+import { StarRating } from '../starrating'
 
 export const BookReview = () => {
   return (
@@ -15,13 +15,7 @@ export const BookReview = () => {
           <span className="text-gray-400 text-sm">Hoje</span>
         </div>
 
-        <section className="inline-flex items-center">
-          <Star className="size-4 text-purple-100 fill-current" />
-          <Star className="size-4 text-purple-100 fill-current" />
-          <Star className="size-4 text-purple-100 fill-current" />
-          <Star className="size-4 text-purple-100 fill-current" />
-          <Star className="size-4 text-purple-100" />
-        </section>
+        <StarRating />
       </header>
 
       <article className="flex items-stretch gap-5">

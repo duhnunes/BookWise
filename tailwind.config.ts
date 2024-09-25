@@ -48,6 +48,7 @@ const config: Config = {
       colors: {
         white: '#FFFFFF',
         black: '#000000',
+        danger: '#F75A68',
 
         green: {
           100: '#50B2C0',

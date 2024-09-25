@@ -13,7 +13,7 @@ export const BookCard = () => {
       />
 
       <article className="flex flex-col justify-between">
-        <div className="">
+        <div className="flex flex-col">
           <strong className="text-gray-100 font-bold text-md">
             A revolução dos bichos
           </strong>

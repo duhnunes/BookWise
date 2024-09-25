@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Avatar } from '../avatar'
 
+import bookImg from '../../../../public/images/books/o-hobbit.png'
+
 export const BookReview = () => {
   return (
     <section className="flex flex-col gap-y-8 p-6 bg-gray-700 rounded-md">
@@ -24,7 +26,7 @@ export const BookReview = () => {
 
       <article className="flex items-stretch gap-5">
         <Image
-          src="https://github.com/duhnunes.png"
+          src={bookImg}
           width={108}
           height={152}
           alt=""

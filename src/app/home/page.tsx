@@ -6,9 +6,9 @@ import { BookCard } from '../components/Cards/BookCard'
 
 export default function Home() {
   return (
-    <main className="min-h-svh grid grid-cols-12">
+    <main className="min-h-svh">
       <Sidebar />
-      <section className="pr-24 flex flex-col mt-[72px] gap-10 col-span-4 col-start-4 col-end-13">
+      <section className="pr-24 flex flex-col pt-[72px] gap-10 ml-72">
         <h1 className="inline-flex items-center gap-3 text-gray-100 font-bold text-2xl">
           <ChartLine className="size-5 text-green-100" />
           Início

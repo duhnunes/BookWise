@@ -1,8 +1,16 @@
-import { Bookmark, BookOpen, BookUser, LibraryBig, User2 } from 'lucide-react'
+import {
+  Bookmark,
+  BookOpen,
+  BookUser,
+  ChevronLeft,
+  LibraryBig,
+  User2,
+} from 'lucide-react'
 import { Sidebar } from '../components/sidebar'
 import { Input } from '../components/ui/input'
 import { UserBookReview } from '../components/Cards/UserBootReview'
 import { Avatar } from '../components/avatar'
+import { Button } from '../components/ui/button'
 
 export default function Home() {
   return (
@@ -10,6 +18,10 @@ export default function Home() {
       <Sidebar />
 
       <section className="pr-24 flex flex-col pt-[72px] gap-10 ml-72">
+        <Button variant="link" size="link">
+          <ChevronLeft className="size-4 text-gray-100" />
+          Voltar
+        </Button>
         <h1 className="inline-flex items-center gap-3 text-gray-100 font-bold text-2xl">
           <User2 className="size-5 text-green-100" />
           Perfil

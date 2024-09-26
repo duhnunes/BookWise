@@ -45,7 +45,7 @@ export const Sidebar = () => {
         </Button>
         <Button variant="link" size="link" className="mx-auto">
           <Avatar />
-          DuH Nunes
+          DuH
           <LogOut className="text-danger size-5" />
         </Button>
       </section>

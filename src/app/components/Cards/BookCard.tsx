@@ -1,16 +1,12 @@
 import Image from 'next/image'
 import { StarRating } from '../starrating'
 
+import book from '../../../../public/images/books/Book.png'
+
 export const BookCard = () => {
   return (
     <section className="flex gap-5 bg-gray-700 px-5 py-4">
-      <Image
-        src="https://github.com/duhnunes.png"
-        width={64}
-        height={94}
-        alt=""
-        className="rounded"
-      />
+      <Image src={book} width={64} height={94} alt="" className="rounded" />
 
       <article className="flex flex-col justify-between">
         <div className="flex flex-col">

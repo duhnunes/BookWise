@@ -3,10 +3,10 @@
 import * as React from 'react'
 
 interface TagsProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  dataState: 'on' | 'off'
+  dataState?: 'on' | 'off'
 }
 
-export const Tags = ({ children, dataState }: TagsProps) => {
+export const Tags = ({ children, dataState = 'off' }: TagsProps) => {
   return (
     <button
       type="button"

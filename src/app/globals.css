@@ -10,4 +10,16 @@
       @apply brightness-90;
     }
   }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar{
+    @apply size-1.5;
+  }
+  ::-webkit-scrollbar-track{
+    @apply bg-gray-700;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb{
+    @apply bg-gray-600 rounded-full;
+  }
 }

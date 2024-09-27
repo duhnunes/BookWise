@@ -23,3 +23,9 @@
     @apply bg-gray-600 rounded-full;
   }
 }
+
+@layer utilities {
+  .hidden-scroll::-webkit-scrollbar {
+    @apply size-0;
+  }
+}

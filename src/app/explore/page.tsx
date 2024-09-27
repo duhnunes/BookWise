@@ -17,7 +17,23 @@ import { StarRating } from '../components/starrating'
 import Link from 'next/link'
 import { Avatar } from '../components/avatar'
 
+interface TagData {
+  active: 'on' | 'off'
+  name: string
+}
+
 export default function Home() {
+  const tagsName: TagData[] = [
+    { active: 'on', name: 'Tudo' },
+    { active: 'off', name: 'Computação' },
+    { active: 'off', name: 'Educação' },
+    { active: 'off', name: 'Fantasia' },
+    { active: 'off', name: 'Ficção científica' },
+    { active: 'off', name: 'Horror' },
+    { active: 'off', name: 'HQs' },
+    { active: 'off', name: 'Suspense' },
+  ]
+
   return (
     <main className="min-h-svh">
       <Sidebar />
@@ -32,14 +48,13 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-3 overflow-x-scroll hidden-scroll cursor-grabbing horizontal-mask">
-          <Tags dataState="on">Tudo</Tags>
-          <Tags dataState="off">Computação</Tags>
-          <Tags dataState="off">Educação</Tags>
-          <Tags dataState="off">Fantasia</Tags>
-          <Tags dataState="off">Ficção científica</Tags>
-          <Tags dataState="off">Horror</Tags>
-          <Tags dataState="off">HQs</Tags>
-          <Tags dataState="off">Suspense</Tags>
+          {tagsName.map((item) => {
+            return (
+              <Tags dataState={item.active} key={item.name}>
+                {item.name}
+              </Tags>
+            )
+          })}
         </div>
 
         <div className="grid mx-auto grid-cols-3 gap-5">

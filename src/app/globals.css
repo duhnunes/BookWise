@@ -24,6 +24,13 @@
   }
 }
 
+@layer components {
+  .horizontal-mask {
+    -webkit-mask: linear-gradient(90deg, transparent, white 5%, white 90%, transparent);
+    mask: linear-gradient(90deg, transparent, white 5%, white 90%, transparent);
+  }
+}
+
 @layer utilities {
   .hidden-scroll::-webkit-scrollbar {
     @apply size-0;

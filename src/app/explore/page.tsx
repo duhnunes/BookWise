@@ -31,7 +31,7 @@ export default function Home() {
           <Input placeholder="Buscar livro ou autor" />
         </div>
 
-        <div className="flex items-center gap-3 overflow-x-scroll hidden-scroll">
+        <div className="flex items-center gap-3 overflow-x-scroll hidden-scroll cursor-grabbing horizontal-mask">
           <Tags dataState="on">Tudo</Tags>
           <Tags dataState="off">Computação</Tags>
           <Tags dataState="off">Educação</Tags>

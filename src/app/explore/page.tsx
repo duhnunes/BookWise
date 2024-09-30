@@ -1,4 +1,4 @@
-import { Binoculars } from 'lucide-react'
+import { Binoculars, Check, X } from 'lucide-react'
 import { Sidebar } from '../components/sidebar'
 import { BookCard } from '../components/Cards/BookCard'
 import { Input } from '../components/ui/input'
@@ -16,6 +16,7 @@ import bookImage from '../../../public/images/books/14-habitos-de-desenvolvedore
 import { StarRating } from '../components/starrating'
 import Link from 'next/link'
 import { Avatar } from '../components/avatar'
+import { Button } from '../components/ui/button'
 
 interface TagData {
   active: 'on' | 'off'
@@ -99,6 +100,39 @@ export default function Home() {
                     <Link href="#">Avaliar</Link>
                   </div>
                   <div className="flex flex-col gap-3">
+                    <article className="flex flex-col gap-6 p-6 bg-gray-700 rounded-md">
+                      <header className="flex items-center justify-between gap-4">
+                        <Avatar />
+                        <strong className="text-gray-100 font-bold leading-short text-base flex-1">
+                          Cristofer Rosser
+                        </strong>
+                        <StarRating />
+                      </header>
+                      <div className="flex flex-col gap-3">
+                        <textarea
+                          name="review"
+                          id="review"
+                          className="bg-gray-800 rounded-s w-full h-[164px] px-5 py-3 text-gray-200 text-sm placeholder:text-gray-400 relative resize-none"
+                          placeholder="Escreva sua avaliação"
+                        >
+                          <footer className="absolute bottom-0 right-0">
+                            <span className="text-gray-400 text-xs">0</span>
+                            <span className="text-gray-400 text-xs">/</span>
+                            <span className="text-gray-400 text-xs">450</span>
+                          </footer>
+                        </textarea>
+
+                        <div className="flex items-center gap-2 ml-auto">
+                          <Button variant="button" size="button">
+                            <X className="text-purple-100" />
+                          </Button>
+                          <Button variant="button" size="button">
+                            <Check className="text-green-100" />
+                          </Button>
+                        </div>
+                      </div>
+                    </article>
+
                     <article className="flex flex-col gap-5 p-6 bg-gray-700 rounded-md">
                       <header className="flex items-start justify-between gap-4">
                         <Avatar />

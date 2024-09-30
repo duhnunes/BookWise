@@ -11,11 +11,13 @@ const buttonVariants = tv({
     variant: {
       default: `bg-gray-600 text-gray-200`,
       link: 'gap-3',
+      button: 'bg-gray-600 rounded-s',
     },
 
     size: {
       default: `py-5 px-6`,
       link: 'gap-3 p-1',
+      button: 'p-2',
     },
   },
 

@@ -4,6 +4,7 @@ import { Button } from '@/app/components/ui/button'
 import { Github } from '@/app/components/assets/github'
 import { GoogleLogo } from '@/app/components/assets/google'
 import { GuestLogo } from '@/app/components/assets/guest'
+import Link from 'next/link'
 
 export default function SignIn() {
   return (
@@ -38,10 +39,12 @@ export default function SignIn() {
             Entrar com Github
           </Button>
 
-          <Button variant="default" size="default">
-            <GuestLogo />
-            Entrar como visitante
-          </Button>
+          <Link href="/">
+            <Button variant="default" size="default">
+              <GuestLogo />
+              Entrar como visitante
+            </Button>
+          </Link>
         </article>
       </section>
     </main>

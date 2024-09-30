@@ -1,9 +1,10 @@
 import { ChartLine, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
-import { Sidebar } from './components/sidebar'
-import { LastBook } from './components/Cards/LastBook'
-import { BookReview } from './components/Cards/BookReview'
+
 import { BookCard } from './components/Cards/BookCard'
+import { BookReview } from './components/Cards/BookReview'
+import { LastBook } from './components/Cards/LastBook'
+import { Sidebar } from './components/sidebar'
 
 export default function Home() {
   return (

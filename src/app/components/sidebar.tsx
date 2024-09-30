@@ -1,8 +1,11 @@
-import Image from 'next/image'
-import logo from '../../../public/logo.svg'
-import { Button } from './ui/button'
 import { BinocularsIcon, ChartLine, LogIn, LogOut, User2 } from 'lucide-react'
+import Image from 'next/image'
+
+import logo from '../../../public/logo.svg'
+import { Github } from './assets/github'
+import { GoogleLogo } from './assets/google'
 import { Avatar } from './avatar'
+import { Button } from './ui/button'
 import {
   Dialog,
   DialogContent,
@@ -10,8 +13,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from './ui/dialog'
-import { GoogleLogo } from './assets/google'
-import { Github } from './assets/github'
 
 export const Sidebar = () => {
   return (

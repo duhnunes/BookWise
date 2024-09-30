@@ -1,10 +1,12 @@
 import Image from 'next/image'
-import hero from '../../../../public/images/login/hero.png'
-import { Button } from '@/app/components/ui/button'
+import Link from 'next/link'
+
 import { Github } from '@/app/components/assets/github'
 import { GoogleLogo } from '@/app/components/assets/google'
 import { GuestLogo } from '@/app/components/assets/guest'
-import Link from 'next/link'
+import { Button } from '@/app/components/ui/button'
+
+import hero from '../../../../public/images/login/hero.png'
 
 export default function SignIn() {
   return (

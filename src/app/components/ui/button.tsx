@@ -1,8 +1,8 @@
 'use client'
 
 import * as React from 'react'
-import { tv, VariantProps } from 'tailwind-variants'
 import { twMerge } from 'tailwind-merge'
+import { tv, VariantProps } from 'tailwind-variants'
 
 const buttonVariants = tv({
   base: `inline-flex items-center gap-5 rounded-md select-none hover:brightness-90 bg-transparent font-medium`,

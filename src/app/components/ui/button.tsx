@@ -11,7 +11,7 @@ const buttonVariants = tv({
     variant: {
       default: `bg-gray-600 text-gray-200`,
       link: 'gap-3',
-      button: 'bg-gray-600 rounded-s',
+      button: 'bg-gray-600 rounded',
     },
 
     size: {

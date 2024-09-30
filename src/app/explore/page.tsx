@@ -109,18 +109,19 @@ export default function Home() {
                         <StarRating />
                       </header>
                       <div className="flex flex-col gap-3">
-                        <textarea
-                          name="review"
-                          id="review"
-                          className="bg-gray-800 rounded-s w-full h-[164px] px-5 py-3 text-gray-200 text-sm placeholder:text-gray-400 relative resize-none"
-                          placeholder="Escreva sua avaliação"
-                        >
-                          <footer className="absolute bottom-0 right-0">
+                        <div className="relative">
+                          <textarea
+                            name="review"
+                            id="review"
+                            className="bg-gray-800 rounded w-full h-[164px] px-5 py-3 text-gray-200 text-sm placeholder:text-gray-400 resize-none"
+                            placeholder="Escreva sua avaliação"
+                          />
+                          <footer className="absolute bottom-2 right-2">
                             <span className="text-gray-400 text-xs">0</span>
                             <span className="text-gray-400 text-xs">/</span>
                             <span className="text-gray-400 text-xs">450</span>
                           </footer>
-                        </textarea>
+                        </div>
 
                         <div className="flex items-center gap-2 ml-auto">
                           <Button variant="button" size="button">

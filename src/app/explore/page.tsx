@@ -1,8 +1,14 @@
 import { Binoculars, Check, X } from 'lucide-react'
-import { Sidebar } from '../components/sidebar'
+import Image from 'next/image'
+import Link from 'next/link'
+
+import bookImage from '../../../public/images/books/14-habitos-de-desenvolvedores-altamente-produtivos.png'
+import { Avatar } from '../components/avatar'
 import { BookCard } from '../components/Cards/BookCard'
+import { Sidebar } from '../components/sidebar'
+import { StarRating } from '../components/starrating'
+import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
-import { Tags } from '../components/ui/tags'
 import {
   Sheet,
   SheetContent,
@@ -10,13 +16,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '../components/ui/sheet'
-import Image from 'next/image'
-
-import bookImage from '../../../public/images/books/14-habitos-de-desenvolvedores-altamente-produtivos.png'
-import { StarRating } from '../components/starrating'
-import Link from 'next/link'
-import { Avatar } from '../components/avatar'
-import { Button } from '../components/ui/button'
+import { Tags } from '../components/ui/tags'
 
 interface TagData {
   active: 'on' | 'off'
@@ -84,7 +84,7 @@ export default function Home() {
                       </div>
 
                       <div className="flex flex-col gap-1">
-                        <StarRating />
+                        <StarRating count={8} />
                         <span className="text-gray-400 text-sm">
                           3 avaliações
                         </span>
@@ -106,7 +106,7 @@ export default function Home() {
                         <strong className="text-gray-100 font-bold leading-short text-base flex-1">
                           Cristofer Rosser
                         </strong>
-                        <StarRating />
+                        <StarRating count={6} />
                       </header>
                       <div className="flex flex-col gap-3">
                         <div className="relative">
@@ -145,7 +145,7 @@ export default function Home() {
                             Há 2 dias
                           </span>
                         </div>
-                        <StarRating />
+                        <StarRating count={7} />
                       </header>
                       <p className="text-gray-300 text-sm">
                         Nec tempor nunc in egestas. Euismod nisi eleifend at et
@@ -166,7 +166,7 @@ export default function Home() {
                             Há 2 dias
                           </span>
                         </div>
-                        <StarRating />
+                        <StarRating count={10} />
                       </header>
                       <p className="text-gray-300 text-sm">
                         Nec tempor nunc in egestas. Euismod nisi eleifend at et
@@ -187,7 +187,7 @@ export default function Home() {
                             Há 2 dias
                           </span>
                         </div>
-                        <StarRating />
+                        <StarRating count={4} />
                       </header>
                       <p className="text-gray-300 text-sm">
                         Nec tempor nunc in egestas. Euismod nisi eleifend at et

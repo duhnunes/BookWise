@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { StarRating } from '../starrating'
 
 import book from '../../../../public/images/books/Book.png'
+import { StarRating } from '../starrating'
 
 export const BookCard = () => {
   return (
@@ -16,7 +16,7 @@ export const BookCard = () => {
           <span className="text-gray-400 font-bold text-sm">George Orwell</span>
         </div>
 
-        <StarRating />
+        <StarRating count={3} />
       </article>
     </section>
   )

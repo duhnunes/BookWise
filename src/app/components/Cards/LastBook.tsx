@@ -21,7 +21,7 @@ export const LastBook = () => {
                 <span className="text-gray-400 text-sm">Há 2 dias</span>
               </div>
 
-              <StarRating />
+              <StarRating count={0} />
             </div>
             <strong className="font-bold text-md leading-short text-gray-100">
               O Hobbit

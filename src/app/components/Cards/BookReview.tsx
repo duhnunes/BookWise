@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Avatar } from '../avatar'
 
 import bookImg from '../../../../public/images/books/o-hobbit.png'
+import { Avatar } from '../avatar'
 import { StarRating } from '../starrating'
 
 export const BookReview = () => {
@@ -15,7 +15,7 @@ export const BookReview = () => {
           <span className="text-gray-400 text-sm">Hoje</span>
         </div>
 
-        <StarRating />
+        <StarRating count={1} />
       </header>
 
       <article className="flex items-stretch gap-5">

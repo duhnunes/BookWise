@@ -23,7 +23,7 @@ export const UserBookReview = () => {
               J.R.R. Tolkien
             </span>
           </header>
-          <StarRating />
+          <StarRating count={0} />
         </div>
       </article>
       <p className="text-gray-300 w-full max-h-88 overflow-ellipsis">

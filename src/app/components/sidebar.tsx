@@ -1,5 +1,8 @@
+'use client'
+
 import { BinocularsIcon, ChartLine, LogIn, LogOut, User2 } from 'lucide-react'
 import Image from 'next/image'
+import { signIn, useSession } from 'next-auth/react'
 
 import logo from '../../../public/logo.svg'
 import { Github } from './assets/github'
@@ -15,6 +18,20 @@ import {
 } from './ui/dialog'
 
 export const Sidebar = () => {
+  const { data: session } = useSession()
+
+  if (session) {
+    return (
+      <>
+        <Button variant="link" size="link" className="mx-auto">
+          <Avatar />
+          {session?.user?.name}
+          <LogOut className="text-danger size-5" />
+        </Button>
+      </>
+    )
+  }
+
   return (
     <aside className="fixed bottom-5 top-5 left-5 rounded-xl bg-gray-700 pt-10 pb-6 overflow-hidden w-[14.5rem]">
       <section className="flex flex-col h-full">
@@ -51,7 +68,12 @@ export const Sidebar = () => {
 
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="link" size="link" className="mx-auto">
+            <Button
+              variant="link"
+              size="link"
+              className="mx-auto"
+              onClick={() => signIn()}
+            >
               Fazer login
               <LogIn className="text-green-100 size-5" />
             </Button>
@@ -78,12 +100,6 @@ export const Sidebar = () => {
             </div>
           </DialogContent>
         </Dialog>
-
-        <Button variant="link" size="link" className="mx-auto">
-          <Avatar />
-          DuH
-          <LogOut className="text-danger size-5" />
-        </Button>
       </section>
 
       <div className="absolute -top-24 rounded-full -left-[140px] size-56 bg-green-300 filter blur-3xl opacity-50 -z-10" />

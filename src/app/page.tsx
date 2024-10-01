@@ -5,7 +5,7 @@ import { getServerSession } from 'next-auth'
 import { BookCard } from './components/Cards/BookCard'
 import { BookReview } from './components/Cards/BookReview'
 import { LastBook } from './components/Cards/LastBook'
-import { Sidebar } from './components/sidebar'
+import { Sidebar } from './components/Sidebar/MenuBox'
 
 export default async function Home() {
   const session = await getServerSession()

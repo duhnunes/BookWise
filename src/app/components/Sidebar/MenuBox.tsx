@@ -1,21 +1,22 @@
 'use client'
 
-import { BinocularsIcon, ChartLine, LogIn, LogOut, User2 } from 'lucide-react'
+import { LogIn, LogOut } from 'lucide-react'
 import Image from 'next/image'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
-import logo from '../../../public/logo.svg'
-import { Github } from './assets/github'
-import { GoogleLogo } from './assets/google'
-import { Avatar } from './avatar'
-import { Button } from './ui/button'
+import logo from '../../../../public/logo.svg'
+import { Github } from '../assets/github'
+import { GoogleLogo } from '../assets/google'
+import { Avatar } from '../avatar'
+import { Button } from '../ui/button'
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from './ui/dialog'
+} from '../ui/dialog'
+import { NavbarMenu } from './Navbar'
 
 export const Sidebar = () => {
   const { data: session } = useSession()
@@ -37,29 +38,7 @@ export const Sidebar = () => {
           className="mb-16 mx-auto pointer-events-none"
           alt=""
         />
-        <nav className="flex-1 mx-auto">
-          <ul className="flex flex-col gap-4 text-gray-400 relative">
-            <li className="inline-flex items-center text-gray-100">
-              <div className="bg-gradient-to-b from-from to-to w-1 h-6 -left-4 absolute rounded-full" />
-              <Button variant="link" size="link">
-                <ChartLine className="size-5" />
-                Início
-              </Button>
-            </li>
-            <li className="inline-flex items-center">
-              <Button variant="link" size="link">
-                <BinocularsIcon className="size-5" />
-                Explorar
-              </Button>
-            </li>
-            <li className="inline-flex items-center">
-              <Button variant="link" size="link">
-                <User2 className="size-5" />
-                Perfil
-              </Button>
-            </li>
-          </ul>
-        </nav>
+        <NavbarMenu />
 
         {!session ? (
           <Dialog>

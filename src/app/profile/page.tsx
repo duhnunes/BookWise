@@ -9,7 +9,7 @@ import {
 
 import { Avatar } from '../components/avatar'
 import { UserBookReview } from '../components/Cards/UserBootReview'
-import { Sidebar } from '../components/sidebar'
+import { Sidebar } from '../components/Sidebar/MenuBox'
 import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 

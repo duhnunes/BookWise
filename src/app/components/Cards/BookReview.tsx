@@ -1,17 +1,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { getServerSession } from 'next-auth'
 
 import bookImg from '../../../../public/images/books/o-hobbit.png'
 import { Avatar } from '../avatar'
 import { StarRating } from '../starrating'
 
-export const BookReview = () => {
+export const BookReview = async () => {
+  const session = await getServerSession()
+
   return (
     <section className="flex flex-col gap-y-8 p-6 bg-gray-700 rounded-md">
       <header className="flex items-start justify-between gap-4">
         <Avatar />
         <div className="flex-1 flex flex-col -space-y-1">
-          <strong className="text-gray-100 font-bold text-md">DuH Nunes</strong>
+          <strong className="text-gray-100 font-bold text-md">
+            {session?.user?.name}
+          </strong>
           <span className="text-gray-400 text-sm">Hoje</span>
         </div>
 

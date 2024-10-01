@@ -20,6 +20,13 @@ import {
 export const Sidebar = () => {
   const { data: session } = useSession()
 
+  function handleConnectGoogle() {
+    signIn('google')
+  }
+  function handleConnectGithub() {
+    signIn('github')
+  }
+
   return (
     <aside className="fixed bottom-5 top-5 left-5 rounded-xl bg-gray-700 pt-10 pb-6 overflow-hidden w-[14.5rem]">
       <section className="flex flex-col h-full">
@@ -69,13 +76,13 @@ export const Sidebar = () => {
                 </DialogTitle>
               </DialogHeader>
               <div className="flex flex-col gap-4">
-                <Button onClick={() => signIn('google')}>
+                <Button onClick={handleConnectGoogle}>
                   <GoogleLogo />
                   <span className="text-gray-200 text-lg font-bold">
                     Entrar com Google
                   </span>
                 </Button>
-                <Button onClick={() => signIn('github')}>
+                <Button onClick={handleConnectGithub}>
                   <Github />
                   <span className="text-gray-200 text-lg font-bold">
                     Entrar com Github

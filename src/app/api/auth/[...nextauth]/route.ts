@@ -7,12 +7,21 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_ID ?? '',
       clientSecret: process.env.GOOGLE_SECRET ?? '',
+      authorization: {
+        params: {
+          scope:
+            'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
+        },
+      },
     }),
     GithubProvider({
       clientId: process.env.GITHUB_ID ?? '',
       clientSecret: process.env.GITHUB_SECRET ?? '',
     }),
   ],
+
+  callbacks: {},
+
   pages: {
     signIn: '/login',
   },

@@ -1,12 +1,15 @@
 import { ChartLine, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
+import { getServerSession } from 'next-auth'
 
 import { BookCard } from './components/Cards/BookCard'
 import { BookReview } from './components/Cards/BookReview'
 import { LastBook } from './components/Cards/LastBook'
 import { Sidebar } from './components/sidebar'
 
-export default function Home() {
+export default async function Home() {
+  const session = await getServerSession()
+
   return (
     <main className="min-h-svh">
       <Sidebar />
@@ -19,18 +22,20 @@ export default function Home() {
 
         <section className="flex items-start gap-x-16">
           <div className="space-y-6">
-            <article className="flex flex-col gap-4 max-w-[608px]">
-              <div className="flex items-center justify-between">
-                <span className="text-gray-100 text-sm">
-                  Sua última leitura
-                </span>
-                <Link href="#" className="flex items-center gap-2">
-                  Ver todos
-                  <ChevronRight className="size-4" />
-                </Link>
-              </div>
-              <LastBook />
-            </article>
+            {session && (
+              <article className="flex flex-col gap-4 max-w-[608px]">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-100 text-sm">
+                    Sua última leitura
+                  </span>
+                  <Link href="#" className="flex items-center gap-2">
+                    Ver todos
+                    <ChevronRight className="size-4" />
+                  </Link>
+                </div>
+                <LastBook />
+              </article>
+            )}
 
             <article className="max-w-[608px] space-y-4">
               <span className="text-gray-100 text-sm">

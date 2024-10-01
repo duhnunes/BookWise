@@ -15,7 +15,7 @@ export function LoginButton({ provider, icon: Icon }: LoginButtonProps) {
     <Button
       variant="default"
       size="default"
-      onClick={() => signIn(`'${provider}'`)}
+      onClick={() => signIn(`${provider}`)}
     >
       <Icon />
       <p>

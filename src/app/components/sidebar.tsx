@@ -68,12 +68,7 @@ export const Sidebar = () => {
 
         <Dialog>
           <DialogTrigger asChild>
-            <Button
-              variant="link"
-              size="link"
-              className="mx-auto"
-              onClick={() => signIn()}
-            >
+            <Button variant="link" size="link" className="mx-auto">
               Fazer login
               <LogIn className="text-green-100 size-5" />
             </Button>
@@ -85,13 +80,13 @@ export const Sidebar = () => {
               </DialogTitle>
             </DialogHeader>
             <div className="flex flex-col gap-4">
-              <Button>
+              <Button onClick={() => signIn('google')}>
                 <GoogleLogo />
                 <span className="text-gray-200 text-lg font-bold">
                   Entrar com Google
                 </span>
               </Button>
-              <Button>
+              <Button onClick={() => signIn('github')}>
                 <Github />
                 <span className="text-gray-200 text-lg font-bold">
                   Entrar com Github

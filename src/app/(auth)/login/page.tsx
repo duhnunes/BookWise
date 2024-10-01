@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { signIn } from 'next-auth/react'
 
 import { Github } from '@/app/components/assets/github'
 import { GoogleLogo } from '@/app/components/assets/google'
@@ -8,6 +7,7 @@ import { GuestLogo } from '@/app/components/assets/guest'
 import { Button } from '@/app/components/ui/button'
 
 import hero from '../../../../public/images/login/hero.png'
+import { LoginButton } from './components/LoginButton'
 
 export default function SignIn() {
   return (
@@ -32,28 +32,14 @@ export default function SignIn() {
         </article>
 
         <article className="flex flex-col gap-4">
-          <Button
-            variant="default"
-            size="default"
-            onClick={() => signIn('google')}
-          >
-            <GoogleLogo />
-            Entrar com Google
-          </Button>
+          <LoginButton provider="google" icon={GoogleLogo} />
 
-          <Button
-            variant="default"
-            size="default"
-            onClick={() => signIn('github')}
-          >
-            <Github />
-            Entrar com Github
-          </Button>
+          <LoginButton provider="github" icon={Github} />
 
           <Link href="/">
             <Button variant="default" size="default">
               <GuestLogo />
-              Entrar como visitante
+              Entrar como Visitante
             </Button>
           </Link>
         </article>

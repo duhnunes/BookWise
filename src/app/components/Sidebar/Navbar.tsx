@@ -19,8 +19,6 @@ export function NavbarMenu() {
     router.push('/profile')
   }
 
-  console.log('pathName', currentPage)
-
   return (
     <nav className="flex-1 mx-auto">
       <ul className="flex flex-col gap-4 text-gray-400 relative">

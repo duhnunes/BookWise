@@ -1,20 +1,20 @@
 import { ChartLine, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
-import { getServerSession } from 'next-auth'
 
+import { auth } from '../auth'
 import { BookCard } from './components/Cards/BookCard'
 import { BookReview } from './components/Cards/BookReview'
 import { LastBook } from './components/Cards/LastBook'
 import { Sidebar } from './components/Sidebar/MenuBox'
 
 export default async function Home() {
-  const session = await getServerSession()
+  const session = await auth()
 
   return (
     <main className="min-h-svh">
       <Sidebar />
 
-      <section className="pr-24 flex flex-col pt-[72px] gap-10 ml-72">
+      <section className="pr-24 flex flex-col pt-[72px] gap-10 ml-72 pb-5">
         <h1 className="inline-flex items-center gap-3 text-gray-100 font-bold text-2xl">
           <ChartLine className="size-5 text-green-100" />
           Início

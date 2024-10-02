@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { getServerSession } from 'next-auth'
+
+import { auth } from '@/auth'
 
 import bookImg from '../../../../public/images/books/o-hobbit.png'
 import { Avatar } from '../avatar'
 import { StarRating } from '../starrating'
 
 export const BookReview = async () => {
-  const session = await getServerSession()
+  const session = await auth()
 
   return (
     <section className="flex flex-col gap-y-8 p-6 bg-gray-700 rounded-md">

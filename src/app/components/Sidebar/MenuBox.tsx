@@ -2,7 +2,7 @@
 
 import { LogIn, LogOut } from 'lucide-react'
 import Image from 'next/image'
-import { signIn, useSession } from 'next-auth/react'
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 import logo from '../../../../public/logo.svg'
 import { Github } from '../assets/github'
@@ -75,7 +75,7 @@ export const Sidebar = () => {
             variant="link"
             size="link"
             className="mx-auto"
-            onClick={() => signIn()}
+            onClick={() => signOut()}
           >
             <Avatar />
             {session.user?.name}

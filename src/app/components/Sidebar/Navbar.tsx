@@ -31,7 +31,7 @@ export function NavbarMenu() {
           <Button
             variant="link"
             size="link"
-            className={currentPage === '/' ? 'text-gray-200' : undefined}
+            className={currentPage === '/' ? 'text-gray-200 ml-1' : undefined}
             onClick={handleHome}
           >
             <ChartLine className="size-5" />
@@ -45,7 +45,9 @@ export function NavbarMenu() {
           <Button
             variant="link"
             size="link"
-            className={currentPage === '/explore' ? 'text-gray-200' : undefined}
+            className={
+              currentPage === '/explore' ? 'text-gray-200 ml-1' : undefined
+            }
           >
             <BinocularsIcon className="size-5" />
             Explorar
@@ -60,7 +62,7 @@ export function NavbarMenu() {
               variant="link"
               size="link"
               className={
-                currentPage === '/profile' ? 'text-gray-200' : undefined
+                currentPage === '/profile' ? 'text-gray-200 ml-1' : undefined
               }
             >
               <User2 className="size-5" />

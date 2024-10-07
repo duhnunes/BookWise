@@ -5,7 +5,7 @@ import { Nunito } from 'next/font/google'
 
 import { auth, BASE_PATH } from '@/auth'
 
-import SessionProvider from './components/SessionProvider'
+import SessionProvider from '../components/SessionProvider'
 
 const nunito = Nunito({
   weight: ['400', '500', '700'],

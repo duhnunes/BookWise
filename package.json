@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.5.3",
     "@prisma/client": "^5.19.1",
+    "@prisma/extension-accelerate": "^1.2.1",
     "@radix-ui/react-dialog": "^1.1.1",
     "@rocketseat/eslint-config": "^2.2.2",
     "lucide-react": "^0.445.0",

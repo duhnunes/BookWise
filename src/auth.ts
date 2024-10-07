@@ -1,26 +1,46 @@
+import { PrismaAdapter } from '@auth/prisma-adapter'
 import NextAuth, { NextAuthConfig } from 'next-auth'
 import github from 'next-auth/providers/github'
 import google from 'next-auth/providers/google'
 
+import prisma from './app/lib/prisma'
+
 export const BASE_PATH = '/api/auth'
 
-console.log('base_path', BASE_PATH)
+const scope = [
+  'https://www.googleapis.com/auth/userinfo.email',
+  'https://www.googleapis.com/auth/userinfo.profile',
+]
 
 const authOptions: NextAuthConfig = {
+  adapter: PrismaAdapter(prisma),
   providers: [
     google({
-      clientId: process.env.GOOGLE_ID ?? '',
-      clientSecret: process.env.GOOGLE_SECRET ?? '',
+      // `clientId` ans `Secret` are unnecessary when use `AUTH_` in front of variable providers in .env file
+      // https://authjs.dev/guides/environment-variables
+      authorization: {
+        scope: scope.join(' '),
+      },
     }),
-    github({
-      clientId: process.env.GITHUB_ID ?? '',
-      clientSecret: process.env.GITHUB_SECRET ?? '',
-    }),
+    github,
   ],
   basePath: BASE_PATH,
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    // signIn: '/login',
+    signIn: '/login',
+  },
+
+  callbacks: {
+    session({ session, user, token }) {
+      if (token) {
+        session.user.id = user.id
+      }
+      return session
+    },
+
+    redirect() {
+      return '/'
+    },
   },
 }
 

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { auth } from '@/auth'
 
-import bookImg from '../../../../public/images/books/o-hobbit.png'
+import bookImg from '../../../public/images/books/o-hobbit.png'
 import { Avatar } from '../avatar'
 import { StarRating } from '../starrating'
 

@@ -3,20 +3,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import bookImage from '../../../public/images/books/14-habitos-de-desenvolvedores-altamente-produtivos.png'
-import { Avatar } from '../components/avatar'
-import { BookCard } from '../components/Cards/BookCard'
-import { Sidebar } from '../components/Sidebar/MenuBox'
-import { StarRating } from '../components/starrating'
-import { Button } from '../components/ui/button'
-import { Input } from '../components/ui/input'
+import { Avatar } from '../../components/avatar'
+import { BookCard } from '../../components/Cards/BookCard'
+import { Sidebar } from '../../components/Sidebar/MenuBox'
+import { StarRating } from '../../components/starrating'
+import { Button } from '../../components/ui/button'
+import { Input } from '../../components/ui/input'
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetTitle,
   SheetTrigger,
-} from '../components/ui/sheet'
-import { Tags } from '../components/ui/tags'
+} from '../../components/ui/sheet'
+import { Tags } from '../../components/ui/tags'
 
 interface TagData {
   active: 'on' | 'off'

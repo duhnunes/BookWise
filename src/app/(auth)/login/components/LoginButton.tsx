@@ -3,7 +3,7 @@
 import { signIn } from 'next-auth/react'
 import * as React from 'react'
 
-import { Button } from '@/app/components/ui/button'
+import { Button } from '@/components/ui/button'
 
 interface LoginButtonProps {
   provider: string

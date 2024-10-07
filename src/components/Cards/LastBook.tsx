@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import bookImg from '../../../../public/images/books/o-hobbit.png'
+import bookImg from '../../../public/images/books/o-hobbit.png'
 import { StarRating } from '../starrating'
 
 export const LastBook = () => {

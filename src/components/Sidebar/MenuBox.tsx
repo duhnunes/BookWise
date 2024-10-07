@@ -4,7 +4,7 @@ import { LogIn, LogOut } from 'lucide-react'
 import Image from 'next/image'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
-import logo from '../../../../public/logo.svg'
+import logo from '../../../public/logo.svg'
 import { Github } from '../assets/github'
 import { GoogleLogo } from '../assets/google'
 import { Avatar } from '../avatar'

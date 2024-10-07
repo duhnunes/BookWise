@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Github } from '@/app/components/assets/github'
-import { GoogleLogo } from '@/app/components/assets/google'
-import { GuestLogo } from '@/app/components/assets/guest'
-import { Button } from '@/app/components/ui/button'
+import { Github } from '@/components/assets/github'
+import { GoogleLogo } from '@/components/assets/google'
+import { GuestLogo } from '@/components/assets/guest'
+import { Button } from '@/components/ui/button'
 
 import hero from '../../../../public/images/login/hero.png'
 import { LoginButton } from './components/LoginButton'

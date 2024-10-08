@@ -16,7 +16,7 @@ const authOptions: NextAuthConfig = {
   adapter: PrismaAdapter(prisma),
   providers: [
     google({
-      // `clientId` ans `Secret` are unnecessary when use `AUTH_` in front of variable providers in .env file
+      // `clientId` and `Secret` are unnecessary when use `AUTH_` in front of variable providers in .env file
       // https://authjs.dev/guides/environment-variables
       authorization: {
         scope: scope.join(' '),
